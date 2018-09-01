@@ -1,4 +1,10 @@
 #!/bin/bash
+
+rm -R dist
+cp -rf src dist
+cp -rf env/lib/python3.6/site-packages/* dist
+cd dist
+
 rm ./hello_serverless.zip
 zip -r hello_serverless.zip *
 
