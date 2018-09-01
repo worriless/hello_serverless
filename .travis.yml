@@ -24,8 +24,6 @@ before_deploy:
   - ls
   - cd dist
   - zip -r hello_serverless.zip .
-  - pwd
-  - ls
 
 deploy:
   provider: lambda
@@ -37,6 +35,7 @@ deploy:
   region: "$AWSREGION"
   role: "arn:aws:iam::$AWSACCOUNTID:role/lambda_basic_execution"
   handler_name: "handler"
+  runtime: "python3.6"
   zip_file: "fileb://dist/hello_serverless.zip"
 
 
