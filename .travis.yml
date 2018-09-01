@@ -3,11 +3,9 @@ python:
   - "3.6"
 cache: pip
 
-before_install:
+install:
   - virtualenv env
   - source env/bin/activate
-
-install:
   - pip install -r requirements.txt
 
 script:
