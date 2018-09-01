@@ -34,7 +34,7 @@ deploy:
   function_name: "$AWSFUNCTIONNAME"
   region: "$AWSREGION"
   role: "arn:aws:iam::$AWSACCOUNTID:role/lambda_basic_execution"
-  handler_name: "handler"
+  handler_name: "hello_serverless.handler"
   runtime: "python3.6"
   zip_file: "fileb://dist/hello_serverless.zip"
 
