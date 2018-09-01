@@ -1,4 +1,7 @@
 #!/bin/bash
+# virtualenv env
+# source env/bin/activate
+# pip install -r requirements.txt
 
 rm -R dist
 cp -rf src dist
@@ -6,7 +9,7 @@ cp -rf env/lib/python3.6/site-packages/* dist
 cd dist
 
 rm ./hello_serverless.zip
-zip -r hello_serverless.zip *
+zip -r hello_serverless.zip .
 
 string=$(aws lambda list-functions)
 if [[ $string = *"HelloServerless"* ]]; then
