@@ -1,0 +1,22 @@
+language: python
+python:
+  - "3.6"
+cache: pip
+
+before_install:
+  - virtualenv env
+  - source env/bin/activate
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - python -m pytest
+  - ls -l
+
+notifications:
+  email:
+    recipients:
+      - inputx@gmail.com
+    on_success: change # default: change
+    on_failure: always # default: always
