@@ -18,7 +18,7 @@ jobs:
         - echo "-----------------> job"
         - ls
         - cp -rf src dist
-        - cp -rf virtualenv/lib/python3.6/site-packages/* dist
+        - cp -rf ~/virtualenv/lib/python3.6/site-packages/* dist
 
 before_deploy:
   - echo '-----------------> prepare to deploy'
