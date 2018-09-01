@@ -35,6 +35,7 @@ deploy:
     secure: "Q7ZguI6NzMbxQ2irgcpmy+pQNHV6EBInEsEyNln9lHbIbVGWRpEoOjfdFTM+QP8I+0UKE5qq78wTbOkdBJ4Q7omv6Ca5P6vkYEvRNootFF6eTWzLlWPE2qj8ysfFaIsYhAyLZ6T5xWqwPNkYaW7Q9PH5kRua70xW3qGeVAmYy5KX13LOxluZStgD9I+3BnAeMVfJVX+IQH/z9IG2crfe26dh58iSEzOHjsz7GrvffuCuT83VYxjg6cP1Z/dDMP4/FJbtSSc36ctTO27k+fJTgiEZMttQgC3ox8W7DvehOLbfqax+cWYQtgkTpTh1Y5LxuF7BMW0Ikvl5oU9g/d1Sl5k2LR3Es77QhnjlkNYQBvjdrm9w3xB7yoRKZjrt48UdUv/ACNjbIRiqnYbj8o27juGptgkFxbnSZ6sVAxGUZWyVwe2lVCqf+qWoJw2rVau4WtxiE8niH7/gzsOydm7eLLRk2+pwiyCjhijK6f7JQypzfhgCEMaAYmFFKh3vOFMSmrW4J5FkH8AiLGkI/5NkLyTj7Ken0QznK32i6252EqKro/ZqIAfkrTw7G6kCdA918XAczX7zgs+iGxx+r6TH5BmEVLkQvTTzE8jmyN0CpzgtCrhoYQctXZ9PTZ32Ls8lmI9Ak5JRYCqBgZ3nkKgv8PB9QOqSK/X8Sbx8TX/bWus="
   function_name: "$AWSFUNCTIONNAME"
   region: "$AWSREGION"
+  role: "arn:aws:iam::$AWSACCOUNTID:role/lambda_basic_execution"
   zip_file: "fileb://dist/hello_serverless.zip"
 
 
