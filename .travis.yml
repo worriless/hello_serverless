@@ -8,11 +8,6 @@ install:
   - pip install -r requirements.txt
   - python -m pytest
   - ls -l
-  - cd ~
-  - ls -l
-  - cd virtualenv
-  - ls -l
-
 
 jobs:
   include:
@@ -22,7 +17,7 @@ jobs:
         - echo "-----------------> job script"
         - ls
         - cp -rf src dist
-        - cp -rf ~/virtualenv/lib/python3.6/site-packages/* dist
+        - cp -rf ~/virtualenv/python3.6.3/lib/python3.6/site-packages/* dist
 
 before_deploy:
   - echo '-----------------> prepare to deploy'
