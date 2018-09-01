@@ -4,7 +4,6 @@ from faker import Faker
 def handler(event, context):
 	faker = Faker()
 	return {
-		'message': 'This is just hello world! ()' + faker.name()
+		'message': 'This is just hello world! ()',
+		'event': event
 	}
-
-# print(handler([], ''))
