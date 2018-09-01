@@ -4,7 +4,7 @@ python:
 cache: pip
 
 install:
-  - virtualenv env
+  - virtualenv -p /usr/bin/python2.7 env
   - ls
   - ls env
   - ls env/bin
